@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/result.css">
+    <title>Result | Sarcasm Detection</title>
+</head>
+
+<body>
+
+
+    <div class="contents">
+
+        <h1>Result</h1>
+
+        <table>
+            <th>Model</th>
+            <th>Output</th>
+            <th>Remarks</th>
+
+            {% for key in result %}
+            <tr>
+                <td> {{key}} </td>
+                <td> {{result[key][0]}} </td>
+                <td> {{result[key][1]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <p>
+            <a href="/">Click here</a> to reach homepage!!
+        </p>
+    </div>
+
+</body>
+
+</html>
